@@ -1,12 +1,5 @@
-/*
-* It is important to show the following message in order to:
-* - to assure users
-* - to scare hackers
-* - to impress investors
-*/
+import company from 'configuration.js';
+import year from 'configuration.js';
 
-console.warn("Security scan starting")
-
-// It is important to let user know when they can close the page 
-
-cnosole.info('Please wait for scan to complete before closing the browser.')
+const message = '© ' + company + ' (' + year + ')';
+document.querySelector('footer').innerText = message;
