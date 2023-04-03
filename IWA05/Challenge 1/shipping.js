@@ -13,27 +13,30 @@ let totalGoods = shoes + toys + shirts + batteries + pens;
 
 //got to declare details for customers to be used 
 let currency = null;
-let location = "RSA";
+let customerLocation = "RSA";
 let customer = 1; 
 let shipping = 0;
 
-if (location === "RSA") {
-    shipping = R400;
-} else if (location === "NAMIBIA") {
-    shipping = $600;
+if (customerLocation === "RSA") {
+    shipping = 400;
+    currency = "R";
+} else if (customerLocation === "NAMIBIA") {
+    shipping = 600;
+    currency = "$";
 } else {
-    shipping = $800;
+    shipping = 800;
+    currency = "$"
 } 
 
 //if location is North Korea console BANNED_WARNING as we do not ship there
 
-if (location ==="North Korea") {
+if (customerLocation ==="North Korea") {
     console.log(BANNED_WARNING);
 }
 
 // calculating shipping special 
 
-if ((location === "RSA" || location === "NAMIBIA") && 
+if ((customerLocation === "RSA" || customerLocation === "NAMIBIA") && 
     customer === 1 ) {
         if (totalGoods >= 1000 || totalGoods >= 60) {
             shipping = 0;
