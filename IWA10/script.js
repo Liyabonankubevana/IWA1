@@ -54,16 +54,15 @@ const futureId = 9
 // Do not change code above this comment
 
 
-console.log(holidays.futureId ? holidays.futureId.name :`ID ${futureId} not created yet`) 
+console.log(holidays.futureId && holidays.futureId.name || `ID ${futureId} not created yet`) 
 //holidays.futureId could optionally be written as holidays[futureId]
-//'holidays.futureId ?' checks whether an item exists in the holidays object with a key of 'futureId' via the question mark"?"
 // If it does, the name item in it must be logged, if not, the interpolated text must appear
 
 copied = holidays.christmas
 
 copied = { 
-    name: 'X-mas' 
-}  //couldn't redefine name in 6/christmas straight away, took another route(schalk analogy)
+    name: 'X-mas Day' 
+}  
 
 correctDate = copied.date
 correctDate = new Date(`25 December ${currentYear}`)
@@ -71,7 +70,7 @@ correctDate = new Date(`25 December ${currentYear}`)
 correctDate.setHours(0)
 correctDate.setMinutes(0)
 
-isEarlier = correctDate < holidays[6].date // holidays[6].date contains the initial wrong date, hence console.log is "true"
+isEarlier = correctDate < holidays[6].date // contains the initial wrong date, console.log is "true"
 console.log('New date is earlier:', isEarlier)
 
 
